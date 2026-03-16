@@ -1,0 +1,42 @@
+.club-card {
+  border-radius: 12px;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.club-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+.club-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.club-card p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.club-card button {
+  background: #f9b233;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.club-card button:hover {
+  background: #f7a90d;
+}
