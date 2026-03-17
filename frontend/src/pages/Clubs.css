@@ -1,0 +1,174 @@
+/* =========================================================
+   MAIN PAGE LAYOUT
+========================================================= */
+.clubs-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding:40px 40px 260px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #f8fafc;
+  overflow-x: hidden !important;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+/* =========================================================
+   LEFT SIDE CONTENT
+========================================================= */
+.clubs-main {
+  flex: 3;
+  min-width: 0;
+}
+
+.clubs-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #002855;
+  margin-bottom: 8px;
+}
+
+.clubs-subtitle {
+  font-size: 16px;
+  color: #6b6b6b;
+  margin-bottom: 30px;
+}
+
+/* =========================================================
+   GRID — Bigger Cards + 3 per row
+========================================================= */
+.clubs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr)); 
+  gap: 32px;
+  width: 100%;
+}
+
+/* =========================================================
+   CLUB CARD — Bigger + Better Layout
+========================================================= */
+.club-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transition: 0.22s ease;
+}
+
+.club-card:hover {
+  transform: translateY(-6px);
+}
+
+.club-img {
+  width: 100%;
+  height: 210px;        /* BIGGER IMAGE */
+  object-fit: cover;
+}
+
+.club-info {
+  text-align: center;
+  padding: 18px 14px;
+}
+
+.club-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #002855;
+  margin-bottom: 8px;
+}
+
+.club-info p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* visible */
+.club-type {
+  font-size: 15px;
+  font-weight: 700;
+  color: #004aad;
+  margin-bottom: 12px;
+}
+
+/* BUTTON */
+.apply-btn {
+  background: #f9b233;
+  border: none;
+  color: white;
+  padding: 12px;
+  width: 80%;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 15px;
+}
+
+.apply-btn:hover {
+  background: #d89a1f;
+}
+
+/* =========================================================
+   RIGHT FILTER SIDEBAR
+========================================================= */
+.clubs-sidebar {
+  flex: 1;
+  min-width: 260px;
+  background: white;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.clubs-sidebar h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #002855;
+  border-bottom: 2px solid #f9b233;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.clubs-sidebar label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: #444;
+  margin: 12px 0;
+  cursor: pointer;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 1200px) {
+  .clubs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .clubs-page {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .clubs-sidebar {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .clubs-grid {
+    grid-template-columns: 1fr;
+  }
+}
